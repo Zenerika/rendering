@@ -1,8 +1,10 @@
 
 function renderNametags(nametags) {
     return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(nametags)}</code>
+        <div class="nametag">
+            <div id="hello">Hello, my name is:</div>
+            <div>
+            </div>
         </div>
     `
 }
