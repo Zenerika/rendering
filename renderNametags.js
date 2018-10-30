@@ -1,13 +1,17 @@
-
-function renderNametags(nametags) {
+function renderNametag(nametag) {
     return `
         <div class="nametag">
-            <div id="hello">Hello, my name is:</div>
-            <div>
-            </div>
+            Hello, my name is:
+            <span>${nametag}</span>
         </div>
     `
 }
+
+function renderNametags (nametags) {
+    return nametags.map(renderNametag).join('')
+}
+
+
 
 function nametags() {
     var content = document.getElementById('content');
