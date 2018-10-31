@@ -1,10 +1,10 @@
+function nameBlock (name) {
+    return `<div class="student"> Roll Call!</div>
+    `
+}
 
 function renderStudents(students) {
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(students)}</code>
-        </div>
-    `
+    return studentsAbstraction.map(nameBlock).join('')
 }
 
 function students() {
