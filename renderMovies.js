@@ -1,10 +1,19 @@
+// NOTE: using the convention of "buildFoo" for anything that returns HTML
+function buildMovie (movie) {
+    // TODO: actually write this!
+    return `
+      <div>
+        <h2>${movie.title}</h2>
+        <span class='year'>${movie.year}</span>
+        <img src="${movie.poster}" alt="Movie poster"></img>
+        <span class='rating'>${movie.imdbRating} / 10</span><br>
+        <span class= 'rotten'>${movie.rottenTomatoesRating * 100}%</span>
+      </div>
+    `
+  }
 
 function renderMovies(movies) {
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(movies)}</code>
-        </div>
-    `
+    return movies.map(buildMovie).join('')
 }
 
 function movies() {
